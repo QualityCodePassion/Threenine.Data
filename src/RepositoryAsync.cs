@@ -57,10 +57,10 @@ namespace Threenine.Data
             return query.ToPaginateAsync(index, size, 0, cancellationToken);
         }
 
-        public Task AddAsync(T entity, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            return _dbSet.AddAsync(entity, cancellationToken);
-        }
+        //public Task AddAsync(T entity, CancellationToken cancellationToken = default(CancellationToken))
+        //{
+        //    return _dbSet.AddAsync(entity, cancellationToken);
+        //}
 
         public Task AddAsync(params T[] entities)
         {
@@ -86,9 +86,9 @@ namespace Threenine.Data
             _dbSet.Update(entity);
         }
 
-        public Task AddAsync(T entity)
-        {
-            return AddAsync(entity, new CancellationToken());
-        }
+        //public Task AddAsync(T entity)
+        //{
+        //    return AddAsync(entity, new CancellationToken());
+        //}
     }
 }

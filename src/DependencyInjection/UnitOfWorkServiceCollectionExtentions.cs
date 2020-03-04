@@ -8,6 +8,7 @@ namespace Threenine.Data.DependencyInjection
         public static IServiceCollection AddUnitOfWork<TContext>(this IServiceCollection services)
             where TContext : DbContext
         {
+            services.AddScoped<TContext>(); // TODO Investigate why this needed to be added in order to find the TContext service
             services.AddScoped<IRepositoryFactory, UnitOfWork<TContext>>();
             services.AddScoped<IUnitOfWork, UnitOfWork<TContext>>();
             services.AddScoped<IUnitOfWork<TContext>, UnitOfWork<TContext>>();

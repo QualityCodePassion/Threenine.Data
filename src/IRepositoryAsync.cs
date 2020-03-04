@@ -26,7 +26,7 @@ namespace Threenine.Data
             bool disableTracking = true,
             CancellationToken cancellationToken = default(CancellationToken));
 
-        Task AddAsync(T entity, CancellationToken cancellationToken = default(CancellationToken));
+        //Task AddAsync(T entity, CancellationToken cancellationToken = default(CancellationToken));
 
         Task AddAsync(params T[] entities);
 

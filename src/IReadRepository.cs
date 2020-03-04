@@ -9,7 +9,7 @@ namespace Threenine.Data
     public interface IReadRepository<T> where T : class
     {
         
-        IQueryable<T> Query(string sql, params object[] parameters);
+        //IQueryable<T> Query(string sql, params object[] parameters);
         
         T Search(params object[] keyValues);
         
